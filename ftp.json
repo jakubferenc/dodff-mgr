@@ -1,0 +1,14 @@
+{
+  "deploy" : true,
+  "proxy" : "",
+  "globs" : [ "!.git", "dist/**/*", "php/**/*", "dist/.htaccess"],
+  "base": "./dist",
+  "ftp" : {
+    "host" : "wellnessfood.savana-hosting.cz",
+    "user" : "assemblage",
+    "password" : "A$$ervaz258FTP!",
+    "dir" : "/dodff.cz",
+    "time" : 5000
+  }
+}
+

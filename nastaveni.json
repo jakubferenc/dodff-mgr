@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Den otevřených dveří Fakulty filozofické ZČU",
+    "description": "Webové stránky pro den otevřených dveří Fakulty filozofické, Západočeské univerzity v Plzni",
+    "tagline": "den otevřených dveří, ff, zču, univerzita",
+    "url": ""
+  },
+  "social": {
+    "twitter": {
+      "username": ""
+    }
+  },
+  "marketing": {
+    "googleAnalytics": {
+      "ID": ""
+    },
+    "googleTagManager": {
+      "ID": ""
+    },
+    "googleSiteVerification": "",
+    "msvalidate": ""
+
+  }
+}

@@ -1,0 +1,805 @@
+@charset "UTF-8";
+
+@import '../../node_modules/bulma/bulma.sass';
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* end fonts */
+
+@import 'lib/all';
+
+$base-font-size: 16px;
+
+div,
+textarea {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  @include from($widescreen) {
+    font-size: $base-font-size;
+  }
+  min-width: 100%;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  color: $primary-color;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 150%;
+  min-height: 100%;
+
+  @include from($widescreen) {
+  }
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+}
+
+/* :CUSTOM CLASSES: */
+
+/* :GRID: */
+
+/****************************************************/
+/* :LAYOUT: */
+
+/****************************************************/
+
+/****************************************************/
+/* :HEADER: */
+
+/****************************************************/
+
+/****************************************************/
+/* :MAIN: */
+
+$padding: 60px;
+
+main {
+
+  padding-left: $padding/3;
+  padding-right: $padding/3;
+  padding-bottom: $padding/3;
+
+  @include from($widescreen) {
+    padding-left: $padding;
+    padding-right: $padding;
+    padding-bottom: $padding;
+  }
+
+
+}
+
+.main-header-container {
+  height: 90px;
+
+}
+
+.main-header {
+  height: 90px;
+
+  padding: 0 $padding/2;
+  transform: translate3d(0,0,0);
+
+  @include from($widescreen) {
+    padding: 0 $padding;
+  }
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.sticky {
+    width: 100%;
+    background-color: #fff;
+    height: 90px;
+  }
+
+  h1,
+  .logo,
+  nav {
+  }
+
+  .main-title {
+    font-size: 1rem;
+  }
+
+  .logo {
+    position: relative;
+    top: 10px;
+    img {
+
+      width: 60%;
+
+      @include from($widescreen) {
+        width: 80%;
+      }
+
+    }
+  }
+}
+
+.main-menu {
+
+  width: 50%;
+  display: none;
+  line-height: 1.1;
+
+  @include from($desktop) {
+    display: block;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 700;
+
+    color: #00b6d7;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    margin-right: 5px;
+    font-size: 12px;
+
+    @include from($fullhd) {
+      margin-right: 15px;
+      font-size: 0.875rem;
+    }
+
+  }
+  a:hover {
+    color: #005cab;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+}
+
+.alt-menu {
+  a {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+  }
+  a:hover {
+    color: #005cab;
+  }
+  a:last-child {
+    margin-right: 0;
+  }}
+
+.container-padding {
+  @include until($widescreen) {
+    padding: $padding/2;
+  }
+  @include from($widescreen) {
+    padding: $padding;
+  }
+}
+
+.list-katedry {
+  margin-top: $padding;
+}
+
+.list-katedra-item {
+  border-bottom: 2px solid #f0f0f5;
+
+
+  padding-bottom: $padding/4;
+  margin-bottom: $padding/2;
+
+  @include from($widescreen) {
+    padding-bottom: $padding/2;
+    margin-bottom: $padding;
+  }
+
+  .title {
+    font-weight: normal;
+    font-size: 52px;
+    margin-bottom: 0rem;
+  }
+  .subtitle {
+    font-style: italic;
+    margin-bottom: .5rem;
+    @include from($widescreen) {
+      width: 50%;
+    }
+    font-size:  1rem;
+  }
+}
+
+.list-katedra-item-content-container {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+
+  .list-katedra-item-content-intro {
+    text-align: justify;
+    font-family: 'EB Garamond', serif;
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .list-katedra-title.as-link {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+    }
+  }
+
+  .list-katedra-item-content-meta {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+
+    .box-widget {
+      background: #f0f0f5;
+      color: #333;
+      padding: 30px;
+      position: relative;
+
+      display: flex;
+      font-weight: 500;
+      flex-direction: column;
+
+      min-height: 100px;
+      padding: $padding/4;
+      max-height: 500px;
+      overflow: auto;
+
+      @include from($widescreen) {
+        height: 600px;
+        max-height: none;
+        padding: $padding/2;
+      }
+
+      h3 {color: inherit; font-size: 1.4rem;}
+      ul {margin-top: 0; margin: 0; list-style: none;}
+
+      &.erasmus {
+        .heading {position:sticky; top: 0; }
+      }
+
+      .heading {
+        margin-bottom: 1rem;
+      }
+      em {
+        font-size: 4em;
+        font-style: normal;
+        line-height: 1;
+      }
+      .content {
+
+        font-size: 1rem;
+
+        @include from($fullhd) {
+          font-size: 1.2rem;
+        }
+
+      }
+    }
+  }
+}
+
+.list-katedra-item-text-image-container {
+}
+
+.video {
+  background: #f0f0f5;
+
+  @include from($widescreen) {
+    height: 500px;
+  }
+
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.list-katedra-item-images-container {
+  .video-container {
+
+  }
+
+  .main-photo {
+    @include from($widescreen) {
+      height: 500px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.list-katedra-title-kap {
+  &.as-title {
+    /*
+    background: url(../images/kap/kap-main.jpg);
+    background-position: center;
+*/
+    color: #08aaf3;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kap/kap-main.jpg);
+    background-position: right 47%;
+  }
+}
+
+.list-katedra-title-kss {
+  &.as-title {
+    /* background: url(../images/kss/kss-main.jpg);
+    background-position: -50% 25%;*/
+    color: #c7874c;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kss/kss-main.jpg);
+    background-position: right 10%;
+  }
+}
+
+.list-katedra-title-kro {
+  &.as-title {
+    color: #2239eb;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kro/kro-main.jpg);
+    background-position: center 58%;
+  }
+}
+
+.list-katedra-title-kaj {
+  &.as-title {
+    color: #ff1f29;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kaj/kaj-main.jpg);
+
+    background-position: right 27%;
+  }
+}
+
+.list-katedra-title-ksa {
+  &.as-title {
+    color: #33150e;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/ksa/ksa-main.jpg);
+    background-position: center 32%;
+  }
+}
+
+.list-katedra-title-kgs {
+  &.as-title {
+    color: #01944e;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kgs/kgs-main.jpg);
+    background-position: center 30%;
+  }
+}
+
+.list-katedra-title-kfi {
+  &.as-title {
+    color: #c0964c;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kfi/kfi-main.jpg);
+    background-position: center 25%;
+  }
+}
+
+.list-katedra-title-khv {
+  &.as-title {
+    /*
+    background: url(../images/khv/khv-main.jpg);
+    background-position:  bottom center;
+*/
+    color: #047fa8;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/khv/khv-main.jpg);
+    background-position: center 22%;
+  }
+}
+
+.list-katedra-title-kbs {
+  &.as-title {
+    color: #1c407c;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kbs/kbs-main.jpg);
+    background-position: center 37%;
+  }
+}
+
+.list-katedra-title-kar {
+  &.as-title {
+    //background: url(../images/kar/kar-main.jpg);
+    //background-position: center;
+    color: #d6a091;
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    background: url(../images/kar/kar-main.jpg);
+    background-position: center;
+  }
+}
+
+.list-katedra-title {
+  line-height: 1;
+  font-size: 10vw;
+
+  @include from($desktop) {
+    font-size: 75px;
+  }
+
+  @include from($fullhd) {
+    font-size: 100px;
+  }
+
+  background-repeat: no-repeat;
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-weight: 700;
+
+  &.as-title {
+    &:hover {
+      background-clip: unset;
+      -webkit-text-fill-color: #333;
+      -moz-text-fill-color: #333;
+      background: none;
+    }
+
+    margin-bottom: 1rem;
+  }
+
+  &.as-link {
+    background-clip: unset;
+    -webkit-text-fill-color: #333;
+    -moz-text-fill-color: #333;
+    background: none;
+    text-align: left;
+    line-height: 1;
+    font-size: 8vw;
+    @include from($desktop) {
+      font-size: 60px;
+    }
+    @include from($fullhd) {
+      font-size: 80px;
+    }
+  }
+
+  &.as-link:focus,
+  &.as-link:active,
+  &.as-link:hover {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-background-clip: text;
+    background-size: 100%;
+
+    @include from($widescreen) {
+    }
+  }
+}
+
+.katedra-social-links {
+
+  margin: $padding/2 0 $padding/2;
+
+  @include from($widescreen) {
+    margin: $padding/2 0 $padding;
+  }
+
+  h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    margin-bottom: 1em;
+
+
+  }
+
+  .social-link {
+    padding: $padding/4;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    min-width: 150px;
+    background: inherit;
+    margin-right: 1rem;
+    background-color: #aaa;
+
+    color: #f7f7f7;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .link-youtube {
+    background-color: #FF0000;
+  }
+
+  .link-instagram {
+    background-color: #8134AF;
+  }
+
+  .link-flickr {
+    background-color: #FF0084;
+  }
+
+  .link-facebook {
+    background-color: #3b5998;
+  }
+
+  .link-vimeo {
+    background-color: #19B7EA;
+
+  }
+}
+/****************************************************/
+
+/****************************************************/
+/* :HEROBOX: */
+.hero-box {
+
+  background: #f0f0f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include until($widescreen) {
+  }
+
+  @include from($widescreen) {
+    min-height: 100vh;
+  }
+
+  .hero-image-container {
+    position: relative;
+  }
+
+  .hero-bg-image {
+    object-fit: cover;
+  }
+
+  .hero-title-box {
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+
+    @include from($tablet) {
+      bottom: 60px;
+      left: 60px;
+      width: 600px;
+      position: absolute;
+    }
+
+    .hero-title-main {
+      color: #fefefe;
+      line-height: 1.2;
+      font-size: 2rem;
+      background-color: #00b6d7;
+      padding: 30px;
+
+      h1 {
+        font-weight: 700;
+        text-align: left;
+        @include from($widescreen) {
+          font-size: 48px;
+        }
+      }
+    }
+    .hero-title-subtitle {
+      background-color: #fff;
+      font-size: 1rem;
+      text-align: left;
+      padding: 15px 30px;
+
+      @include from($widescreen) {
+        font-size: 1.2rem;
+      }
+      color: #000;
+    }
+  }
+
+  .signature {
+    text-align: right;
+    margin-top: 2rem;
+    img {
+
+      max-width: 25%;
+
+
+      @include from($widescreen) {
+        max-width: 280px;
+
+      }
+
+    }
+    i {
+      margin-left: 15px;
+    }
+  }
+
+  .hero-content-container {
+    padding: $padding/2;
+    padding-top: 0;
+    font-family: 'EB Garamond', serif;
+
+    p {
+      line-height: 1.7;
+    }
+
+    @include from($tablet) {
+      width: 75%;
+      padding: $padding;
+      text-align: justify;
+    }
+  }
+
+  .hero-subtitle {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/****************************************************/
+
+/****************************************************/
+/* :FOOTER: */
+.main-footer {
+  min-height: 100vh;
+  background: #f0f0f5;
+  color: #333;
+  padding: $padding $padding/2;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: 'EB Garamond', serif;
+
+  position: relative; // to get on top of the fixed menu
+  z-index: 11;
+
+
+  @include from($widescreen) {
+    padding: $padding * 1.5 $padding;
+  }
+
+  .video {
+    margin-bottom: $padding/2;
+  }
+
+  .cc-logo {
+    margin-top: 2rem;
+  }
+
+  .columns {
+    small {
+      opacity: .5;
+    }
+  }
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5em;
+  }
+}
+
+/****************************************************/
+
+.sticky {
+  position: fixed;
+  z-index: 6;
+}
+
+.sticky-anchor {
+  background: transparent;
+  height: 0;
+}
+
+.footer-info-to-load {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: .5s;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+
+.topbar-test {
+  position: fixed;
+  bottom: 0; left: 0;
+  background: #eee;
+  color: #fefefe;
+  height: 50px;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    color: #333;
+
+    content: "mobile";
+
+    @include from($tablet) {
+      content: "tablet";
+    }
+    @include from($desktop) {
+      content: "desktop";
+    }
+    @include from($widescreen) {
+      content: "widescreen";
+    }
+    @include from($fullhd) {
+      content: "fullhd";
+    }
+  }
+}
+
+.stream-link {
+  a  {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+  }
+}

@@ -1,0 +1,13 @@
+# 301 redirects from the old website url structure
+# test with https://htaccess.madewithlove.be/ and https://regex101.com/
+# made by https://www.assemblage.cz
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule (.*) https://www.dodff.cz/$1 [R=301,L]
+</IfModule>
+

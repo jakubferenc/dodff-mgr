@@ -1,0 +1,84 @@
+// Include pug components and partials
+
+doctype html
+html(lang="cs")
+  head
+    block meta
+      meta(charset="utf-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block title
+      title Den otevřených dveří Fakulty filozofické ZČU
+
+    block favicon
+      link(rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32")
+      link(rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16")
+      link(rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png")
+      link(rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png")
+      link(rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png")
+      link(rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png")
+
+      meta(name='google-site-verification' content=`${meta.googleSiteVerification}`)
+      meta(name='msvalidate.01' content=`${meta.msvalidate}`)
+
+      // SEO
+      meta(name="description" content=`${meta.description}`)
+      meta(name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1")
+      link(rel="canonical" href="#{meta.title}")
+      meta(property="og:locale" content="cs_CZ")
+      meta(property="og:type" content="website")
+      meta(property="og:title" content=`${meta.title} | ${meta.tagline}`)
+      meta(property="og:description" content=`${meta.description}`)
+      meta(property="og:url" content=`${meta.url}`)
+      meta(property="og:site_name" content=`${meta.title} | ${meta.tagline}`)
+      meta(name="twitter:card" content="summary_large_image")
+      meta(name="twitter:description" content="#{meta.tagline}")
+      meta(name="twitter:title" content="#{meta.title} | #{meta.tagline}")
+      meta(name="twitter:site" content=`${social.twitter.username}`)
+      script.schema-graph(type="application/ld+json").
+        {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"#{meta.tagline}#website","url":"#{meta.tagline}","name":"#{meta.title} | #{meta.tagline}","publisher":{"@id":"#{meta.tagline}#/schema/person/"},"potentialAction":{"@type":"SearchAction","target":"#{meta.tagline}?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"#{meta.tagline}#webpage","url":"#{meta.tagline}","inLanguage":"cs-CZ","name":"#{meta.title} | #{meta.tagline}","isPartOf":{"@id":"#{meta.tagline}#website"},"about":{"@id":"#{meta.tagline}#/schema/person/"},"description":"#{meta.tagline}"}]}
+      // / SEO
+
+
+    - let bodyClass = 'index';
+
+    block vars
+
+
+    block css
+      <!-- inject:css -->
+      link(rel="stylesheet" href="/assets/css/main.css?" + Math.floor(Date.now() / 1000))
+      <!-- endinject -->
+
+    block js
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CK67CH8FDC"></script>
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CK67CH8FDC');
+
+
+    block header
+
+    body(class=bodyClass)
+
+      block head
+        include ./header.pug
+
+      main
+        block main
+
+      block foot
+        include ./footer.pug
+
+
+      block javascript
+
+        script(src="/assets/js/app.build.js?" + Math.floor(Date.now() / 1000))
+
+

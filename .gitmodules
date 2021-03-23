@@ -1,0 +1,3 @@
+[submodule "src/js/lib/utils-js"]
+	path = src/js/lib/utils-js
+	url = git@github.com:assemblage/utils-js.git
